@@ -1,8 +1,11 @@
 answer = input("Do you want to hear a joke? ")
 
-if answer == "Yes":
+affirmative_response = [ "Yes", "yes", "Y","y"]
+negative_response = [ "No", "no", "N","n"]
+
+if answer in affirmative_response:
     print("I'm against picketing, but I don't know how to show it")
-elif answer == "No":
+elif answer in negative_response:
     print("Fine.")
 else:
     print("I don't understand.")

@@ -1,0 +1,112 @@
+            /* 
+Project Name: Monthly Resolutions
+Client: One Month
+Author: Pravin Selvarajah
+*/
+            /*----------------------------------------------------------------------------- 
+01=BASE   
+-----------------------------------------------------------------------------*/
+            /* Box Model Hack */
+            
+            * {
+                -moz-box-sizing: border-box;
+                /* Firexfox */
+                -webkit-box-sizing: border-box;
+                /* Safari/Chrome/iOS/Android */
+                box-sizing: border-box;
+                /* IE */
+                background-color: #F0F6FE;
+                box-sizing: border-box;
+            }
+            
+            .clear {
+                clear: both;
+            }
+            /*----------------------------------------------------------------------------- 
+02=LAYOUT  
+-----------------------------------------------------------------------------*/
+            
+            h1 {
+                margin: 15px 0 0 15px;
+                font-size: 90px;
+            }
+            
+            h2 {
+                font-size: 30px;
+            }
+            
+            h3 {
+                margin: 0 0 0 15px;
+            }
+            
+            .blog {
+                width: 785px;
+                float: left;
+                padding-top: 0;
+                padding: 28px;
+                border: ridge black;
+                padding-bottom: 70px;
+            }
+            
+            .layout {
+                margin: 0 auto;
+                padding: 15px;
+                justify-content: center;
+            }
+            
+            blockquote p {
+                padding: 15px;
+                background: #eee;
+                border-radius: 5px;
+                width: 300px;
+            }
+            
+            .sidebar {
+                float: left;
+                margin: 5px;
+                border-left: 10px solid #5d6da950;
+                padding-left: 15px;
+                border-top: ridge black;
+                border-right: ridge black;
+                border-bottom: ridge black;
+                padding-top: 5px;
+                margin-top: 0;
+            }
+            
+            .clear {
+                clear: both;
+            }
+            
+            #display_pic {
+                border-radius: 50%;
+            }
+            
+            .heading {
+                width: 700px;
+                margin: 0 auto;
+            }
+            
+            #container {
+                margin: 0 auto;
+                padding: 100px;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+            a:hover {
+                color: red;
+                cursor: pointer;
+            }
+            
+            .footer {
+                margin: 15px;
+                padding: 0;
+                margin-left: 0px;
+            }
+            
+            .heading1 {
+                padding-left: 150px;
+                font-size: 25px;
+            }

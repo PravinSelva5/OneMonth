@@ -7,3 +7,9 @@
 .hero img {
     border-radius: 0;
 }
+
+aside.right,
+aside.left {
+    text-align: center;
+    float: inherit;
+}

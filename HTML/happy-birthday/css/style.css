@@ -64,7 +64,7 @@
         font-size: 2.5rem;
     }
     /*
- * Container Styles
+ /* Container Styles
 */
     
     .container {
@@ -88,14 +88,14 @@
         text-align: center;
     }
     /*
- * Hero Styles
+ /* Hero Styles
 */
     
     .hero img {
         width: 100%;
     }
     /*
- * Section Styles
+ /* Section Styles
 */
     
     section.intro,
@@ -111,7 +111,7 @@
         background-color: #e6e9ea;
     }
     /*
- * Aside Styles
+ /* Aside Styles
 */
     
     aside.left {
@@ -125,6 +125,8 @@
     aside {
         margin-right: 20px;
     }
+
+
     /*
     PIXELS, EMS , AND REMS?
     

@@ -1,0 +1,48 @@
+body {
+    background: none;
+    width:100%;
+}
+
+.container {
+    width:400px%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+}
+.hero {
+    width:414px;
+}
+
+img {
+    border-radius: 0%;
+    margin:0;
+    margin-bottom:5px;
+    }
+
+.images {
+    margin-left: 110px;
+}
+
+h1 {
+    display: grid;
+    margin: 0;
+    padding:0;
+    padding-right: 35px;
+    place-items: center center;
+    margin-bottom:15px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+address {
+    align-items: center;
+    margin: 0 auto;  /* CENTERS TEXT WITHIN CONTAINER */
+}
+
+p{
+ margin-left:110px;
+}

@@ -1,16 +1,20 @@
 body {
     background: none;
     width:100%;
+    height:100%;
+    margin: 0px;
 }
 
 .container {
-    width:400px%;
+    width:106.5%;
+    height: auto;
     margin:0;
     display: flex;
     flex-direction: column;
 }
 .hero {
-    width:414px;
+    width:100%;
+    height: 100%;
 }
 
 img {
@@ -44,5 +48,19 @@ address {
 }
 
 p{
- margin-left:110px;
+ margin:0 auto;
+}
+
+.layout.intro:nth-child(n){
+    background: #FFF;
+}
+
+.layout.contact:nth-child(n+1){
+    background-color: #e6e9ea;
+    padding:5px;
+    
+}
+
+.layout.footer:nth-child(n+2){
+    background-color: #e6e9ea;
 }

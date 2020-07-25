@@ -1,5 +1,5 @@
 /*
- * General/Utility Styles
+ /* General/Utility Styles
 */
 
 * {
@@ -32,10 +32,39 @@ strong {
   font-weight: 600;
 }
 
+#lightbox {
+  position: fixed;
+  z-index: 1000 ;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.8);
+  display:none;
+}
+
+#lightbox.active {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width:90%;
+  max-height:80%;
+  background-color: black;
+  border: 2px solid white;
+  padding:4px;
+}
+
 /* ---------------------------------------------- */
 /* ---------------------------------------------- */
 /* ---------------------------------------------- */
 
+.diet-hobbies br{
+  display: block;
+  margin: 10px 0;
+  line-height: 100px;
+}
 
 
 /*
@@ -109,7 +138,7 @@ header .logo {
 }
 
 .info h2.relationship, .info h2.name {
-  color: #909597; 
+  color: #909597;
   margin-bottom: 3px;
 }
 
@@ -145,14 +174,14 @@ header .logo {
    font-size: 1rem;
  }
 
-/* ---------------------------------------------- */
-/* ---------------------------------------------- */
-/* ---------------------------------------------- */
 
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
 
 
 /*
- /* .about section
+ /* .about-dog section
 */
 
 .about {
@@ -161,28 +190,39 @@ header .logo {
   text-align: center;
 }
 
+.about-dog {
+  border-bottom:1px solid #DCE0E0;
+}
+
 .about-info {
-  padding: 0 15px;
-  font-size: 0.85rem; 
+  padding: 0 20px;
+  font-size: 0.8rem;
 }
 
 .contact-owner {
   padding:30px;
-  font-size: 0.7rem; 
+  font-size: 0.8rem;
   text-align: center;
   color: rgb(255, 89, 95);
   font-weight: bold;
 }
 
-.about-dog {
-  border-bottom:1px solid #DCE0E0; ;
-}
+
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+
+
+/*
+ /* .care section
+*/
 
 .care {
   text-align: left;
   padding: 10px 20px;
   font-size: 0.8rem;
-  border-bottom:1px solid #DCE0E0; ;
+  border-bottom:1px solid #DCE0E0;
 }
 
 .care-title {
@@ -197,48 +237,82 @@ header .logo {
   padding:1px;
 }
 
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+/*
+ /* .games section
+*/
+
+
 .games {
   text-align: left;
   padding: 10px 20px;
   font-size: 0.8rem;
-  border-bottom:1px solid #DCE0E0; ;
+  border-bottom:1px solid #DCE0E0;
 }
 
 .games-title {
   padding: 10px 10px 10px 0;
 }
 
-.frisbee img, .swimming img, .fetch img{
-  float: left;
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+/*
+ /* .photos section
+*/
+
+.photos .dog-1 img,
+.photos .dog-2 img,
+.photos .dog-3 img
+{
+  width:100%;
+  height:auto;
+  padding: 20px 20px 0px 20px ;
 }
 
 
-
-
 /* ---------------------------------------------- */
 /* ---------------------------------------------- */
 /* ---------------------------------------------- */
-
-
 
 /*
- /* .care section
+ /* FULL PAGE RESPONSIVE MEDIA QUERY PORTION
 */
 
-
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
 
 
 
  @media only screen and (min-width:1060px){
-  
-  .container{
+
+  .container {
     width: 1040px;
     margin: 0 auto;
-  } 
+    overflow: hidden;
+  }
   .column {
      float:left;
    }
-   
+
+   .about-dog .container,
+   .care .container,
+   .games .container {
+      border-bottom:1px solid #DCE0E0;
+      padding-bottom:10px;
+    }
+
+    .about-dog,
+    .care,
+    .games {
+      border-bottom: none;
+    }
+
    .info .profile {
      width: 660px;
      border-right: 1px solid #DCE0E0;
@@ -251,7 +325,7 @@ header .logo {
    .info .owner-details {
       width:20%;
    }
-   
+
    .info .pet-details {
       width:80%;
       text-align: left;
@@ -281,4 +355,96 @@ header .logo {
       display: block;
       padding: 3px;
     }
-  }
+
+
+/* ---------------------------------------------- */
+/* ------------ABOUT SECTION------------------------ */
+/* ---------------------------------------------- */
+
+.about-info {
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* ---------------------------------------------- */
+/* -------------CARE SECTION------------------------ */
+/* ---------------------------------------------- */
+
+.care {
+  padding-top: 28px;
+  text-align: center;
+}
+
+.care-title, .diet-hobbies, .checking-time {
+  float: left;
+  margin: 0 auto;
+  width: 33.3%;
+  font-size: 0.85rem;
+}
+
+strong {
+  font-weight: normal;
+}
+
+/*---------------------------------------------- */
+/*-------------GAMES SECTION------------------------*/
+/*---------------------------------------------- */
+
+.games{
+  height: 130px;
+  width: 100%;
+}
+
+.games-title {
+  width:35%;
+  text-align: center;
+}
+
+.games .games-title .hobbies {
+  text-align: center;
+}
+
+.hobbies {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.hobbies, .frisbee, .swimming, .fetch {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*---------------------------------------------- */
+/*-------------PHOTOS SECTION--------------------*/
+/*---------------------------------------------- */
+
+.dog-1 , .dog-2 , .dog-3  {
+  float: left;
+  margin:27px;
+  padding-top: 28px;
+  text-align: center;
+  width:25%;
+}
+
+.photos .dog-1 img {
+  padding-left: 0px;
+  padding-right:0px;
+  padding-bottom:0px;
+  padding-top:27px;
+  height: 350px;
+  width:220px;
+}
+
+
+
+
+
+
+
+
+
+
+
+}

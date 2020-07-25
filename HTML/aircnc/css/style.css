@@ -32,29 +32,7 @@ strong {
   font-weight: 600;
 }
 
-#lightbox {
-  position: fixed;
-  z-index: 1000 ;
-  top:0;
-  width:100%;
-  height:100%;
-  background-color: rgba(0,0,0,0.8);
-  display:none;
-}
 
-#lightbox.active {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#lightbox img {
-  max-width:90%;
-  max-height:80%;
-  background-color: black;
-  border: 2px solid white;
-  padding:4px;
-}
 
 /* ---------------------------------------------- */
 /* ---------------------------------------------- */
@@ -312,6 +290,14 @@ header .logo {
     .games {
       border-bottom: none;
     }
+
+    .photos .container .dog-1 img:hover,
+    .photos .container .dog-2 img:hover,
+    .photos .container .dog-3 img:hover {
+      transition:0.5s;
+      transform: scale(1.1);
+    }
+
 
    .info .profile {
      width: 660px;

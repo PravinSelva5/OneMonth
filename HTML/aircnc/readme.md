@@ -1,1 +1,1 @@
-## OneMonth HTML/CSS course
+## OneMonth HTML/CSS Final Challenge

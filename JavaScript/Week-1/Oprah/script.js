@@ -28,15 +28,14 @@ var createImage = function(src, title) {
  if (username === "Chris" || username === "Pravin" ){
         document.write("<h1>Hello " + username + " you won a " + car.title + "!</h1>");
         for (var i=0; i < images.length; i++){
+            if(i === images.length){
+                document.getElementById("car-image").src = null;
+                break;
+            }
             if (car.title === images[i].title){
-                if(i === images.length){
-                    document.getElementById("car-image").src = null;
-                    break;
-                }
-                document.body.appendChild(images[i].src);
+                document.body.appendChild(images[i]);
             }
         }
-
 }
 else {
         document.write("<h1>Hello " + username + "!</h1>");

@@ -1,0 +1,26 @@
+* {
+    background-color: aquamarine;
+}
+
+.movie-title, 
+#movie-name p {
+    font-family: 'Recursive', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.movie-title {
+    text-decoration: underline;
+}
+#movie-name p {
+    font-size: 5rem;
+    border: solid 0.5rem;
+}
+
+#movie-name {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 10rem;
+
+}

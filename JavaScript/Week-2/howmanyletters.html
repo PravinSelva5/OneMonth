@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Many Letters?</title>
+    <style>
+        #output {
+            font-size: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        p {
+            height: auto;
+            width: auto;
+            font-size: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>The total number of letters are:</p>
+        <p id= "output"></p>
+    </div>
+
+    <script type="text/javascript">
+        
+        var word = window.prompt("Please provide a word", "OneMonth");
+        function howManyLetters (word) {
+            const letters = word.split('');
+            console.log(letters);
+            var count = 0;
+            var lettersCheck = /^[A-Za-z]+$/;
+            for ( var i = 0; i < letters.length; i++){
+                const found = letters[i].match(lettersCheck);
+                if (found){
+                    count++;
+                    }
+              document.getElementById("output").innerHTML= count;
+            }
+}
+    howManyLetters(word);   
+    </script>
+</body>
+</html>

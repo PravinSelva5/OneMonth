@@ -4,6 +4,11 @@ body {
 	margin: 0 auto;
 }
 
+div .container .container-padding50 .js-container .container-image {
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
 .container-padding50 {
 	padding-top: 50px;
 }
@@ -30,7 +35,7 @@ body {
 }
 
 .container-image {
-	width: 30%;
+	width: 50%;
 	display: block;
 	float: left;
 	margin-right:3%;

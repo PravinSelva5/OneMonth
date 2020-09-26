@@ -1,8 +1,9 @@
 /* 1. Search */
 
+var UI = {};
+UI.EnterPress;
 
-
-
+UI.SubmitClick;
 
 /* 2. Query Soundcloud API */
 

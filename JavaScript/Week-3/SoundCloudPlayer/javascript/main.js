@@ -26,9 +26,10 @@ soundCloudAPI.getTrack = function(inputValue) {
   });
 }
 
-soundCloudAPI.getTrack("tory lanez");
+soundCloudAPI.getTrack("the weeknd");
 
 
+/* 3. Display the cards */
 soundCloudAPI.renderTracks = function(tracks) {
 
     tracks.forEach(function(track) {
@@ -72,6 +73,10 @@ soundCloudAPI.renderTracks = function(tracks) {
       button.appendChild(icon);
       button.appendChild(buttonText);
 
+      button.addEventListener('click', function() {
+        soundCloudAPI.getEmbed(track.permalink_url);
+      });
+
       card.appendChild(cardImage);
       card.appendChild(content);
       card.appendChild(button);
@@ -83,13 +88,28 @@ soundCloudAPI.renderTracks = function(tracks) {
 }
 
 
+soundCloudAPI.getEmbed = function(trackURL) {
+  /* 4. Add to playlist and play */
+    console.log("Click");
+    SC.oEmbed(trackURL, {
+      auto_play: true
+    }).then(function(embed){
+      console.log('oEmbed response: ', embed);
+
+      var sideBar = document.querySelector('.js-playlist');
+      
+
+      var box = document.createElement('div');
+      box.innerHTML = embed.html;
+
+      sideBar.insertBefore(box, sideBar.firstChild);
+      localStorage.setItem("key", sideBar.innerHTML);   
+});
+
+}
 
 
-
-/* 3. Display the cards */
-
-
-
-
-
-/* 4. Add to playlist and play */
+// local storage allows us to save the playlist, so that after refresh or quit the website and
+// go back, the saved playlist will still be present
+var sideBar = document.querySelector('.js-playlist');
+sideBar.innerHTML = localStorage.getItem("key");
